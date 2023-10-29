@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" defaultIdMethod="native" namespace="SimpleMVC">
+    <table name="post" phpName="Post">
+        <column name="ID" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="title" type="varchar" size="255" required="true" />
+        <column name="content" type="varchar" size="500" required="true"/>
+    </table>
+
+</database>
+
+

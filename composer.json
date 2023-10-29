@@ -1,0 +1,13 @@
+{
+    "require": {
+        "php": "^8.0.2",
+        "propel/propel": "~2.0@beta",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JDT\\":"./",
+            "SimpleMVC\\":"orm/src/SimpleMVC"
+        }
+    }
+}

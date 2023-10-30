@@ -9,5 +9,8 @@
             "JDT\\":"./",
             "SimpleMVC\\":"orm/src/SimpleMVC"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
     }
 }

@@ -8,8 +8,9 @@ use SimpleMVC\PostQuery;
 class TestController{
     public function index(HttpRequest $request){
         
-        var_dump(PostQuery::create()
-                    ->find());
+        // var_dump(PostQuery::create()
+        //             ->find());
+        return 'tes';
         // $view = new View('pdfLoadingPage');
         // $view->render();
     }

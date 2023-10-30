@@ -9,36 +9,37 @@ class HttpRequest {
     private $body;
     private $session;
 
-    public function __construct($method, $uri, $query, $headers, $body) {
-        $this->method = $method;
-        $this->uri = $uri;
-        $this->query = $query;
-        $this->headers = $headers;
-        $this->body = $body;
+    // public function __construct($method, $uri, $query, $headers, $body) {
+    public function __construct(array $requestData) {
+        $this->method = $requestData['method'];
+        $this->uri = $requestData['uri'];
+        $this->query = $requestData['query'];
+        $this->headers = $requestData['headers'];
+        $this->body = $requestData['body'];
     }
 
-    public function method() {
+    public function method(): string {
         return $this->method;
     }
 
-    public function uri() {
+    public function uri(): string  {
         return $this->uri;
     }
 
-    public function query() {
+    public function query(): array {
         return $this->query;
     }
 
-    public function header($header) {
-        return isset($this->headers[$header]) ? $this->headers[$header] : null;
+    public function header($header):array {
+        return array_key_exists($header, $this->headers) ? $this->headers[$header] : null;
     }
 
-    public function all() {
+    public function all(): array {
         return $this->body;
     }
 
-    public function input($key) {
-        return $this->body[$key];
+    public function input($key) : string {
+        return isset($this->body[$key]) ? $this->body[$key] : null;
     }
 
     public function session($key){

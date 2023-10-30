@@ -21,6 +21,17 @@ if( ENVIRONMENT === 'development' ){
 require ROOT_FOLDER.'/vendor/autoload.php';
 // require_once __DIR__.'/orm/conf/config.php';
 
-use JDT\config\app;
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can handle the incoming request using
+| the application's HTTP request. Then, we will send the response back
+| to this client's browser.
+|
+*/
 
-(new app())->start();
+use JDT\core\JDTFacade;
+
+(new JDTFacade())->startApplication();
